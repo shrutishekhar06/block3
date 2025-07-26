@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Boxes</title>
+  <style>
+    .box1 {
+      background-color: lightcoral;
+      padding: 20px;
+      border: 4px solid red;
+      margin: 15px;
+      box-sizing: content-box;
+      width: 250px;
+    }
+
+    .box2 {
+      background-color: lightblue;
+      padding: 15px;
+      border: 3px solid blue;
+      margin: 20px;
+      box-sizing: border-box;
+      width: 250px;
+    }
+
+    .box3 {
+      background-color: lightgreen;
+      padding: 10px;
+      border: 2px solid green;
+      margin: 25px;
+      /* box-sizing not set, will use default (content-box) */
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box1">
+    <p>This is Box 1. It uses content-box.</p>
+  </div>
+
+  <div class="box2">
+    <p>This is Box 2. It uses border-box.</p>
+  </div>
+
+  <div class="box3">
+    <p>This is Box 3. It uses default box-sizing.</p>
+  </div>
+
+</body>
+</html>
