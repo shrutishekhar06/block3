@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .block-element {
+      display: block;
+      width: 100%;
+      border: 2px solid #007BFF;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #e6f0ff;
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: #ffd9b3;
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .inline-block-element {
+      display: inline-block;
+      width: 150px;
+      height: 80px;
+      background-color: #d5f5e3;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #28a745;
+      text-align: center;
+    }
+
+    .hidden-element {
+      display: none;
+      padding: 10px;
+      background-color: #f8d7da;
+      border: 1px solid #dc3545;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Display Property Demo</h2>
+  <p>This page shows how <strong>block</strong>, <strong>inline</strong>, <strong>inline-block</strong>, and <strong>none</strong> display types behave.</p>
+
+  <div class="block-element">Block Element - takes full width</div>
+
+  <span class="inline-element">Inline Element</span>
+  <span class="inline-element">Next Inline</span>
+
+  <div class="inline-block-element">Inline-Block Box</div>
+  <div class="inline-block-element">Another Box</div>
+
+  <div id="hidden-box" class="hidden-element">This element has display: none</div>
+  <button onclick="toggleHidden()">Toggle Hidden Element</button>
+
+  <script>
+    function toggleHidden() {
+      const el = document.getElementById("hidden-box");
+      el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
